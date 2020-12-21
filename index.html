@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>→_→</title>
+		<link rel="stylesheet" type="text/css" href="css/start.css"/>
+		
+		<link rel="stylesheet" type="text/css" href="css/cake.css"/>
+		
+		<link rel="stylesheet" type="text/css" href="css/photos.css"/>
+		
+		<link rel="stylesheet" type="text/css" href="css/wish.css"/>
+		
+		<link rel="stylesheet" type="text/css" href="css/end.css"/>
+
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.wrap-start{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+
+			.wrap-cake {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: #ee9ca7;
+				
+				display: none;
+			}
+
+			.wrap-photos {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: #eee;
+				
+				
+				display: none;
+			}
+			
+		</style>
+
+	</head>
+	<body>
+		
+		<!-- -------------------开始页面-------------------------- -->
+		<div class="wrap-start">
+			<nav class="nav">
+				<div class="nav-content">
+					<ul class="nav-items">
+						<li class="nav-item"> <span class="item-text"> 距离生日：</span> </li>
+						<li class="nav-item"> <span class="item-text"> <span id="day"> </span> </span> </li>
+						<li class="nav-item"> <span class="item-text"> <span id="hour"></span> </span> </li>
+						<li class="nav-item"> <span class="item-text"> <span id="min"></span> </span> </li>
+						<li class="nav-item"> <span class="item-text"> <span id="sec"></span> </span> </li>
+					</ul>
+				</div>
+				<label class="nav-btn" for="menu-cb" id="navBtn">
+					<span class="btnRail"></span>
+					<span class="btnRail"></span>
+				</label>
+			</nav>
+		</div>
+
+        <!-- -------------------相片页面-------------------------- -->
+		<div class="wrap-photos">
+			<div class="container">
+				<img src="./img/ameng.jpg" class="pic1" />
+				<img src="./img/baby.jpg" class="pic2" />
+				<img src="./img/kolar.jpg" class="pic3" />
+				<img src="./img/duck.jpg" class="pic4" />
+				<img src="./img/baby02.jpg" class="pic5" />
+				<img src="./img/pika02.jpg" class="pic6" />
+				<img src="./img/pika01.jpg" class="pic7" />
+				<img src="./img/xiaoxin.jpg" class="pic8" />
+				<img src="./img/zhanfish.jpg" class="pic9" />
+				<img src="./img/pan.jpg" class="pic10" />
+			</div>
+
+		</div>
+		<script src="js/photos.js" type="text/javascript" charset="utf-8"></script>
+          
+	  <!-- -------------------cake页面-------------------------- -->
+		<div class="wrap-cake">
+			<div class="cake">
+				<div class="cake-floor"><img src="img/cake-floor.png"></div>
+				<div class="cake-foot"><img src="img/cake-foot.png"></div>
+				<div class="cake-candle"><img src="img/cake-candle.png"></div>
+				<div class="candle-fire"></div>
+				<div class="cake-text">
+				  <h1>happy birthday!</h1>
+				  <span>亲爱的王胖，生日快乐哦！</span>
+				</div>
+			</div>
+			
+			<div class="wish" id="endBtn">
+				<span>🎉</span><span>🎉</span><span>🎉</span><span>许个愿吧</span>
+			</div>
+		</div>
+		
+		
+		<!-- -------------------end页面-------------------------- -->
+		<!-- <div class="wrap-end"></div> -->
+		
+		
+		<!-- -------------------音频页面-------------------------- -->
+		<audio  id="audioBir">
+		  <source src="./happybirthday.mp3" type="audio/mpeg">
+		</audio> 
+		
+		
+		<!------------------------------ 开始页面js 开始 -->
+		<script src="js/start.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			var endBtn = document.getElementById("endBtn");
+			endBtn.onclick = function(){
+			    wrapCake.style.display = "none";
+			    endFun();
+			}
+			
+			
+		</script>
+		
+		<!------------------------------ end页面js 开始 -->
+		<script src="js/end.js" type="text/javascript" charset="utf-8"></script>
+		
+	</body>
+</html>
